@@ -8,4 +8,8 @@ import { ITransaction } from 'src/app/models/transaction.model';
 })
 export class TransactionComponent {
   @Input() transaction!: ITransaction;
+
+  dateStyles: Record<string, string> = {
+    'border-bottom': '1px dashed #979797',
+  };
 }

@@ -26,6 +26,8 @@
     >
       {{ transaction.amount | currency }}
     </h5>
-    <h5 class="transaction__date">{{ transaction.date | date }}</h5>
+    <span class="transaction__date" [ngStyle]="dateStyles">
+      {{ transaction.date | date }}
+    </span>
   </div>
 </div>
