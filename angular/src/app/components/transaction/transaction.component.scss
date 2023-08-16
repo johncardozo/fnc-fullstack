@@ -49,4 +49,11 @@
     background-color: #febee7;
     color: #fb4fbc;
   }
+  &__delete {
+    color: #fb81ce;
+    font-size: 0.9rem;
+    vertical-align: middle;
+    margin-top: 2px;
+    cursor: pointer;
+  }
 }
