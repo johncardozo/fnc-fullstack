@@ -12,4 +12,8 @@ export class TransactionComponent {
   dateStyles: Record<string, string> = {
     'border-bottom': '1px dashed #979797',
   };
+
+  miFuncion = () => {
+    alert('Me hicieron click');
+  };
 }
