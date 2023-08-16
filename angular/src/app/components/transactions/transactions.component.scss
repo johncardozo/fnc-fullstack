@@ -1,0 +1,16 @@
+@use "../../../styles.scss" as s;
+
+.transactions {
+  &__empty-title {
+    font-family: s.$font-family;
+    color: #9387ff;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+      rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  }
+}
