@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ITransaction } from 'src/app/models/transaction.model';
 
 @Component({
@@ -8,8 +8,9 @@ import { ITransaction } from 'src/app/models/transaction.model';
 })
 export class TransactionsComponent {
   @Input() transactions!: ITransaction[];
+  @Output() removeTransactionEvent = new EventEmitter<string>();
 
-  miFuncion(transactionId: string) {
-    alert(`Eliminando la transacción #${transactionId}`);
+  removeEvent(transactionId: string) {
+    this.removeTransactionEvent.emit(transactionId);
   }
 }

@@ -36,4 +36,10 @@ export class AppComponent {
       date: new Date(2023, 8, 12),
     },
   ];
+
+  removeTransaction(transactionId: string) {
+    this.transactions = this.transactions.filter(
+      (transaction) => transaction.id !== transactionId
+    );
+  }
 }
