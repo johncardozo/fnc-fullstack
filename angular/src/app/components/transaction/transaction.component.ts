@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ITransaction } from 'src/app/models/transaction.model';
 
 @Component({
@@ -8,12 +8,13 @@ import { ITransaction } from 'src/app/models/transaction.model';
 })
 export class TransactionComponent {
   @Input() transaction!: ITransaction;
+  @Output() removeTransactionEvent = new EventEmitter<string>();
 
   dateStyles: Record<string, string> = {
     'border-bottom': '1px dashed #979797',
   };
 
-  miFuncion = () => {
-    alert('Me hicieron click');
+  remove = () => {
+    this.removeTransactionEvent.emit(this.transaction.id);
   };
 }
