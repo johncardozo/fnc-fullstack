@@ -56,4 +56,10 @@
     margin-top: 2px;
     cursor: pointer;
   }
+  &__amount-expense {
+    color: #ff7dcf;
+  }
+  &__amount-income {
+    color: #5dc65d;
+  }
 }
