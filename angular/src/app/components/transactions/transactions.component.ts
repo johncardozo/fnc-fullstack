@@ -8,7 +8,8 @@ import { ITransaction } from 'src/app/models/transaction.model';
 })
 export class TransactionsComponent {
   @Input() transactions!: ITransaction[];
-  miFuncion() {
-    alert('Evento detectado en el componente padre');
+
+  miFuncion(transactionId: string) {
+    alert(`Eliminando la transacción #${transactionId}`);
   }
 }
