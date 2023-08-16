@@ -1,0 +1,33 @@
+@use "../../../styles.scss" as styles;
+
+.transaction {
+  background-color: #fff;
+  border-radius: 15px;
+  font-family: styles.$font-family;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+  &__category {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+  }
+
+  &__amount {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: right;
+  }
+
+  &__date {
+    font-size: 0.6rem;
+    font-weight: 400;
+    text-align: right;
+    color: #979797;
+  }
+}
