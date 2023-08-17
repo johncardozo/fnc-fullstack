@@ -13,4 +13,20 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
       rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    h3 {
+      font-family: s.$font-family;
+      color: #4d4d4d;
+    }
+    a {
+      font-family: s.$font-family;
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: #559bfc;
+    }
+  }
 }

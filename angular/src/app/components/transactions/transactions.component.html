@@ -1,4 +1,9 @@
 <div class="transactions">
+  <div class="transactions__header">
+    <h3>Transactions</h3>
+    <a routerLink="add">Add</a>
+  </div>
+
   <div *ngIf="transactions.length > 0; then noEmpty; else empty">
     Ignored content
   </div>
