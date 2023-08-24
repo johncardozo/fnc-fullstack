@@ -1,9 +1,10 @@
-import { SafeAreaView, StatusBar, StyleSheet, Text } from "react-native";
+import { SafeAreaView, StatusBar, StyleSheet } from "react-native";
+import CoffeeList from "./CoffeeList";
 
 const Main = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>The Coffee Network</Text>
+      <CoffeeList />
     </SafeAreaView>
   );
 };

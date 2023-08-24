@@ -1,0 +1,32 @@
+export const coffees = [
+  {
+    id: "1",
+    product: "Mocca",
+    brand: "Juan Valdez",
+    country: "Colombia",
+    body: "full",
+    acidity: "milt",
+    notes: "caramel",
+    stars: 4,
+  },
+  {
+    id: "2",
+    product: "Vesuvio",
+    brand: "Kolb",
+    country: "Kenia",
+    body: "smooth",
+    acidity: "low",
+    notes: "chocolate",
+    stars: 3,
+  },
+  {
+    id: "3",
+    product: "RR",
+    brand: "Kolb",
+    country: "Camerun",
+    body: "full",
+    acidity: "milt",
+    notes: "hazelnut",
+    stars: 4,
+  },
+];
