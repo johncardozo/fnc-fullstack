@@ -1,23 +1,26 @@
 import { Text, View } from "react-native";
 import { coffees } from "../data/coffees";
+import { FlatList } from "react-native";
 
 const CoffeeList = () => {
   return (
-    <View>
-      {coffees.map((coffee) => (
-        <View key={coffee.id}>
-          <Text>{coffee.id}</Text>
-          <Text>{coffee.product}</Text>
-          <Text>{coffee.brand}</Text>
-          <Text>{coffee.country}</Text>
-          <Text>{coffee.body}</Text>
-          <Text>{coffee.acidity}</Text>
-          <Text>{coffee.notes}</Text>
-          <Text>{coffee.stars}</Text>
-          <Text>--------------</Text>
+    <FlatList
+      data={coffees}
+      ItemSeparatorComponent={<Text></Text>}
+      renderItem={({ item }) => (
+        <View>
+          <Text>{item.id}</Text>
+          <Text>{item.product}</Text>
+          <Text>{item.brand}</Text>
+          <Text>{item.country}</Text>
+          <Text>{item.body}</Text>
+          <Text>{item.acidity}</Text>
+          <Text>{item.notes}</Text>
+          <Text>{item.stars}</Text>
         </View>
-      ))}
-    </View>
+      )}
+      keyExtractor={(coffee) => coffee.id}
+    />
   );
 };
 
