@@ -7,7 +7,6 @@ const CoffeeList = () => {
   return (
     <FlatList
       data={coffees}
-      ItemSeparatorComponent={<Text></Text>}
       renderItem={({ item }) => <CoffeeItem coffee={item} />}
       keyExtractor={(coffee) => coffee.id}
     />
