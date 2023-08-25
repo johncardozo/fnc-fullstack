@@ -1,16 +1,19 @@
 import { Text, View, StyleSheet } from "react-native";
+import StyledText from "./StyledText";
 
 const CoffeeItem = ({ coffee }) => {
   return (
     <View style={styles.container}>
-      <Text>{coffee.id}</Text>
+      <StyledText big>{coffee.id}</StyledText>
       <Text style={styles.product}>{coffee.product}</Text>
       <Text>{coffee.brand}</Text>
-      <Text>{coffee.country}</Text>
+      <StyledText>{coffee.country}</StyledText>
       <Text>{coffee.body}</Text>
       <Text>{coffee.acidity}</Text>
       <Text>{coffee.notes}</Text>
-      <Text>{coffee.stars}</Text>
+      <StyledText bold big blue>
+        {coffee.stars}
+      </StyledText>
     </View>
   );
 };
