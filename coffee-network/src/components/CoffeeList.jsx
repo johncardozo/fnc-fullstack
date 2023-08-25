@@ -1,24 +1,14 @@
-import { Text, View } from "react-native";
+import { Text, FlatList } from "react-native";
+
 import { coffees } from "../data/coffees";
-import { FlatList } from "react-native";
+import CoffeeItem from "./CoffeeItem";
 
 const CoffeeList = () => {
   return (
     <FlatList
       data={coffees}
       ItemSeparatorComponent={<Text></Text>}
-      renderItem={({ item }) => (
-        <View>
-          <Text>{item.id}</Text>
-          <Text>{item.product}</Text>
-          <Text>{item.brand}</Text>
-          <Text>{item.country}</Text>
-          <Text>{item.body}</Text>
-          <Text>{item.acidity}</Text>
-          <Text>{item.notes}</Text>
-          <Text>{item.stars}</Text>
-        </View>
-      )}
+      renderItem={({ item }) => <CoffeeItem coffee={item} />}
       keyExtractor={(coffee) => coffee.id}
     />
   );
