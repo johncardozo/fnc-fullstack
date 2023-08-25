@@ -4,16 +4,15 @@ import StyledText from "./StyledText";
 const CoffeeItem = ({ coffee }) => {
   return (
     <View style={styles.container}>
-      <StyledText big>{coffee.id}</StyledText>
-      <Text style={styles.product}>{coffee.product}</Text>
-      <Text>{coffee.brand}</Text>
-      <StyledText>{coffee.country}</StyledText>
-      <Text>{coffee.body}</Text>
-      <Text>{coffee.acidity}</Text>
-      <Text>{coffee.notes}</Text>
-      <StyledText bold big blue>
-        {coffee.stars}
+      <StyledText fontWeight="bold" fontSize="heading">
+        {coffee.product}
       </StyledText>
+      <StyledText fontSize="subheading">{coffee.brand}</StyledText>
+      <StyledText color="secondary">{coffee.country}</StyledText>
+      <StyledText>{coffee.body}</StyledText>
+      <StyledText>{coffee.acidity}</StyledText>
+      <StyledText>{coffee.notes}</StyledText>
+      <StyledText>{coffee.stars}</StyledText>
     </View>
   );
 };
