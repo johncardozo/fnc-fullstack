@@ -1,5 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import StyledText from "./StyledText";
+import CoffeeStars from "./CoffeeStars";
 
 const CoffeeItemHeader = ({ coffee }) => {
   return (
@@ -7,7 +8,7 @@ const CoffeeItemHeader = ({ coffee }) => {
       <StyledText fontWeight="bold" fontSize="heading">
         {coffee.product}
       </StyledText>
-      <StyledText>{coffee.stars}</StyledText>
+      <CoffeeStars stars={coffee.stars} />
     </View>
   );
 };
