@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Image, View, StyleSheet } from "react-native";
 import StyledText from "./StyledText";
 import CoffeeItemHeader from "./CoffeeItemHeader";
 
@@ -7,6 +7,7 @@ import theme from "../theme";
 const CoffeeItem = ({ coffee }) => {
   return (
     <View style={styles.container}>
+      <Image style={styles.banner} source={{ uri: coffee.img }} />
       <CoffeeItemHeader coffee={coffee} />
       <StyledText color="secondary" fontSize="subheading">
         {coffee.brand}, {coffee.country}
@@ -31,6 +32,11 @@ const styles = StyleSheet.create({
   product: {
     fontWeight: "900",
     color: "brown",
+  },
+  banner: {
+    height: 50,
+    borderRadius: 4,
+    marginBottom: 5,
   },
 });
 

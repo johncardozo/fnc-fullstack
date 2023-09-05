@@ -8,6 +8,7 @@ export const coffees = [
     acidity: "milt",
     notes: "caramel",
     stars: 4,
+    img: "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3284&q=80",
   },
   {
     id: "2",
@@ -18,6 +19,7 @@ export const coffees = [
     acidity: "low",
     notes: "chocolate",
     stars: 3,
+    img: "https://images.unsplash.com/photo-1554600740-951beab4712b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80",
   },
   {
     id: "3",
@@ -28,6 +30,7 @@ export const coffees = [
     acidity: "milt",
     notes: "hazelnut",
     stars: 4,
+    img: "https://images.unsplash.com/photo-1595434091143-b375ced5fe5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3024&q=80",
   },
   {
     id: "4",
@@ -38,6 +41,7 @@ export const coffees = [
     acidity: "milt",
     notes: "caramel",
     stars: 4,
+    img: "https://plus.unsplash.com/premium_photo-1668565018786-d58c32776078?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3067&q=80",
   },
   {
     id: "5",
@@ -48,6 +52,7 @@ export const coffees = [
     acidity: "low",
     notes: "chocolate",
     stars: 2,
+    img: "https://images.unsplash.com/photo-1546379753-abb7fd8cfb93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3164&q=80",
   },
   {
     id: "6",
@@ -58,6 +63,7 @@ export const coffees = [
     acidity: "milt",
     notes: "hazelnut",
     stars: 2,
+    img: "https://images.unsplash.com/photo-1587080413959-06b859fb107d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3292&q=80",
   },
   {
     id: "7",
@@ -68,6 +74,7 @@ export const coffees = [
     acidity: "milt",
     notes: "caramel",
     stars: 1,
+    img: "https://images.unsplash.com/photo-1512568400610-62da28bc8a13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80",
   },
   {
     id: "8",
@@ -78,6 +85,7 @@ export const coffees = [
     acidity: "low",
     notes: "chocolate",
     stars: 2,
+    img: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3121&q=80",
   },
   {
     id: "9",
@@ -88,5 +96,6 @@ export const coffees = [
     acidity: "milt",
     notes: "hazelnut",
     stars: 1,
+    img: "https://images.unsplash.com/photo-1570443005116-f5171450d1bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3136&q=80",
   },
 ];
