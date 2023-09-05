@@ -4,6 +4,7 @@ const theme = {
     textSecondary: "#69645C",
     listBackground: "#CBC2B3",
     cardBackground: "#fff",
+    appBarBackground: "#A2102A",
   },
   fontSizes: {
     heading: 20,
