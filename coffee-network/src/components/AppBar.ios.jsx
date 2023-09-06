@@ -11,7 +11,7 @@ const AppBarLink = ({ children, to }) => {
   );
 };
 
-const IOSAppBar = () => {
+const AppBar = () => {
   return (
     <View style={styles.container}>
       <AppBarLink to="/">The Coffee Network</AppBarLink>
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default IOSAppBar;
+export default AppBar;

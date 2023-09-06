@@ -1,12 +1,7 @@
 import { SafeAreaView, StyleSheet, Text, Platform } from "react-native";
 import { Route, Routes } from "react-router-native";
 import CoffeeList from "./CoffeeList";
-
-// Carga dinámica de componentes dependiendo de la plataforma
-const AppBar = Platform.select({
-  ios: () => require("./IOSAppBar").default,
-  default: () => require("./AppBar").default,
-})();
+import AppBar from "./AppBar";
 
 const Main = () => {
   return (
