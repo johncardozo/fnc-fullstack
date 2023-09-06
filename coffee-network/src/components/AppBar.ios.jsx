@@ -15,7 +15,7 @@ const AppBar = () => {
   return (
     <View style={styles.container}>
       <AppBarLink to="/">The Coffee Network</AppBarLink>
-      <AppBarLink to="/about">About</AppBarLink>
+      <AppBarLink to="/login">Login</AppBarLink>
     </View>
   );
 };

@@ -2,6 +2,7 @@ import { SafeAreaView, StyleSheet, Text, Platform } from "react-native";
 import { Route, Routes } from "react-router-native";
 import CoffeeList from "./CoffeeList";
 import AppBar from "./AppBar";
+import Login from "../pages/Login";
 
 const Main = () => {
   return (
@@ -9,7 +10,7 @@ const Main = () => {
       <AppBar />
       <Routes>
         <Route path="/" element={<CoffeeList />} />
-        <Route path="/about" element={<Text>FNC</Text>} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </SafeAreaView>
   );
