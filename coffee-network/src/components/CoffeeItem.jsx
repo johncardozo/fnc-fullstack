@@ -1,10 +1,11 @@
-import { Image, View, StyleSheet } from "react-native";
+import { Image, View, StyleSheet, Platform } from "react-native";
 import StyledText from "./StyledText";
 import CoffeeItemHeader from "./CoffeeItemHeader";
 
 import theme from "../theme";
 
 const CoffeeItem = ({ coffee }) => {
+  const platform = Platform.OS === "android" ? "🤖" : "🍏";
   return (
     <View style={styles.container}>
       <Image style={styles.banner} source={{ uri: coffee.img }} />
@@ -13,7 +14,7 @@ const CoffeeItem = ({ coffee }) => {
         {coffee.brand}, {coffee.country}
       </StyledText>
       <StyledText>
-        {coffee.body}, {coffee.acidity}, {coffee.notes}
+        {platform} {coffee.body}, {coffee.acidity}, {coffee.notes}
       </StyledText>
     </View>
   );
@@ -22,7 +23,11 @@ const CoffeeItem = ({ coffee }) => {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: theme.colors.cardBackground,
+    backgroundColor: Platform.select({
+      android: theme.colors.cardBackground,
+      ios: "#A2102A",
+      default: "yellow",
+    }),
     marginTop: 6,
     marginBottom: 6,
     marginLeft: 15,
