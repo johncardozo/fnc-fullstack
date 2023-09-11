@@ -1,4 +1,4 @@
-import { Text, FlatList, StyleSheet } from "react-native";
+import { Text, FlatList, StyleSheet, ActivityIndicator } from "react-native";
 
 import CoffeeItem from "./CoffeeItem";
 import theme from "../theme";
@@ -9,18 +9,29 @@ const CoffeeList = () => {
   const { coffees } = useCoffees();
 
   return (
-    <FlatList
-      data={coffees}
-      style={styles.container}
-      renderItem={({ item }) => <CoffeeItem coffee={item} />}
-      keyExtractor={(coffee) => coffee.id}
-    />
+    <>
+      {coffees ? (
+        <FlatList
+          data={coffees}
+          style={styles.container}
+          renderItem={({ item }) => <CoffeeItem coffee={item} />}
+          keyExtractor={(coffee) => coffee.id}
+        />
+      ) : (
+        <ActivityIndicator size="large" color="red" style={styles.loading} />
+      )}
+    </>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: theme.colors.listBackground,
+  },
+  loading: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 
