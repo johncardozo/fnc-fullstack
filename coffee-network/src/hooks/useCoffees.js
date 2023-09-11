@@ -6,7 +6,7 @@ const useCoffees = () => {
   // Código ejecutado al montar el componente
   useEffect(() => {
     const fetchCoffees = async () => {
-      const url = "https://64f8eadd824680fd21803236.mockapi.io/coffees";
+      const url = process.env.EXPO_PUBLIC_API_URL;
 
       try {
         const response = await fetch(url);
