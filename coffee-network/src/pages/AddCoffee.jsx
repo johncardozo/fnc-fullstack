@@ -1,5 +1,13 @@
-import { Button, Text, View, TextInput, StyleSheet } from "react-native";
+import {
+  Text,
+  View,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+} from "react-native";
 import { Formik } from "formik";
+
+import theme from "../theme";
 
 const initialValues = {
   product: "",
@@ -61,7 +69,9 @@ const AddCoffee = () => {
               value={values.img}
               onChangeText={handleChange("img")}
             />
-            <Button onPress={handleSubmit} title="Add coffee" />
+            <TouchableOpacity style={styles.button} onPress={handleSubmit}>
+              <Text style={styles.button.text}>ADD COFFEE</Text>
+            </TouchableOpacity>
           </View>
         );
       }}
@@ -72,6 +82,15 @@ const AddCoffee = () => {
 const styles = StyleSheet.create({
   form: {
     margin: 15,
+  },
+  button: {
+    backgroundColor: theme.colors.appBarBackground,
+    padding: 8,
+    borderRadius: 5,
+    text: {
+      color: "#fff",
+      textAlign: "center",
+    },
   },
 });
 
