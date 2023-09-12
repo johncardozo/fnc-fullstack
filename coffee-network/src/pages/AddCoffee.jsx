@@ -1,5 +1,6 @@
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import { Formik, useField } from "formik";
+import { useNavigate } from "react-router-native";
 
 import theme from "../theme";
 import StyledTextInput from "../components/StyledTextInput";
@@ -27,11 +28,33 @@ const FormikInputValue = ({ name, ...props }) => {
 };
 
 const AddCoffee = () => {
+  const navigate = useNavigate();
+
+  // Función que crea el café en el backend
+  const createCoffee = async (values) => {
+    const data = {
+      ...values,
+      stars: parseInt(values.stars),
+    };
+    const url = process.env.EXPO_PUBLIC_API_URL;
+    try {
+      // Guarda los datos en Backend
+      await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      // Navega el inicio
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={(values) => console.log(values)}
-    >
+    <Formik initialValues={initialValues} onSubmit={createCoffee}>
       {({ handleSubmit }) => {
         return (
           <View style={styles.form}>
