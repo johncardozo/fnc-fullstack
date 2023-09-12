@@ -1,13 +1,8 @@
-import {
-  Text,
-  View,
-  TextInput,
-  StyleSheet,
-  TouchableOpacity,
-} from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import { Formik } from "formik";
 
 import theme from "../theme";
+import StyledTextInput from "../components/StyledTextInput";
 
 const initialValues = {
   product: "",
@@ -29,42 +24,42 @@ const AddCoffee = () => {
       {({ handleChange, handleSubmit, values }) => {
         return (
           <View style={styles.form}>
-            <TextInput
+            <StyledTextInput
               placeholder="product"
               value={values.product}
               onChangeText={handleChange("product")}
             />
-            <TextInput
+            <StyledTextInput
               placeholder="brand"
               value={values.brand}
               onChangeText={handleChange("brand")}
             />
-            <TextInput
+            <StyledTextInput
               placeholder="country"
               value={values.country}
               onChangeText={handleChange("country")}
             />
-            <TextInput
+            <StyledTextInput
               placeholder="body"
               value={values.body}
               onChangeText={handleChange("body")}
             />
-            <TextInput
+            <StyledTextInput
               placeholder="acidity"
               value={values.acidity}
               onChangeText={handleChange("acidity")}
             />
-            <TextInput
+            <StyledTextInput
               placeholder="notes"
               value={values.notes}
               onChangeText={handleChange("notes")}
             />
-            <TextInput
+            <StyledTextInput
               placeholder="stars"
               value={values.stars}
               onChangeText={handleChange("stars")}
             />
-            <TextInput
+            <StyledTextInput
               placeholder="image"
               value={values.img}
               onChangeText={handleChange("img")}
