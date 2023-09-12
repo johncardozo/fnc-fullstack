@@ -1,5 +1,5 @@
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
-import { Formik } from "formik";
+import { Formik, useField } from "formik";
 
 import theme from "../theme";
 import StyledTextInput from "../components/StyledTextInput";
@@ -15,55 +15,34 @@ const initialValues = {
   img: "",
 };
 
+const FormikInputValue = ({ name, ...props }) => {
+  const [field, meta, helpers] = useField(name);
+  return (
+    <StyledTextInput
+      value={field.value}
+      onChangeText={(value) => helpers.setValue(value)}
+      {...props}
+    />
+  );
+};
+
 const AddCoffee = () => {
   return (
     <Formik
       initialValues={initialValues}
       onSubmit={(values) => console.log(values)}
     >
-      {({ handleChange, handleSubmit, values }) => {
+      {({ handleSubmit }) => {
         return (
           <View style={styles.form}>
-            <StyledTextInput
-              placeholder="product"
-              value={values.product}
-              onChangeText={handleChange("product")}
-            />
-            <StyledTextInput
-              placeholder="brand"
-              value={values.brand}
-              onChangeText={handleChange("brand")}
-            />
-            <StyledTextInput
-              placeholder="country"
-              value={values.country}
-              onChangeText={handleChange("country")}
-            />
-            <StyledTextInput
-              placeholder="body"
-              value={values.body}
-              onChangeText={handleChange("body")}
-            />
-            <StyledTextInput
-              placeholder="acidity"
-              value={values.acidity}
-              onChangeText={handleChange("acidity")}
-            />
-            <StyledTextInput
-              placeholder="notes"
-              value={values.notes}
-              onChangeText={handleChange("notes")}
-            />
-            <StyledTextInput
-              placeholder="stars"
-              value={values.stars}
-              onChangeText={handleChange("stars")}
-            />
-            <StyledTextInput
-              placeholder="image"
-              value={values.img}
-              onChangeText={handleChange("img")}
-            />
+            <FormikInputValue placeholder="product" name="product" />
+            <FormikInputValue placeholder="brand" name="brand" />
+            <FormikInputValue placeholder="country" name="country" />
+            <FormikInputValue placeholder="body" name="body" />
+            <FormikInputValue placeholder="acidity" name="acidity" />
+            <FormikInputValue placeholder="notes" name="notes" />
+            <FormikInputValue placeholder="stars" name="stars" />
+            <FormikInputValue placeholder="image" name="img" />
             <TouchableOpacity style={styles.button} onPress={handleSubmit}>
               <Text style={styles.button.text}>ADD COFFEE</Text>
             </TouchableOpacity>
